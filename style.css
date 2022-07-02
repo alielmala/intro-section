@@ -269,6 +269,7 @@ header > * {
     }
     .hero-img-mobile{
         display: block;
+        margin: 0px;
     }
     .hero-desc {
         max-width: none;
@@ -298,4 +299,9 @@ header > * {
     .logos-list img {
         width: 60px;
     }
+    .rotate{
+        transform: rotate(180deg);
+        transition: all .3s;
+    }
+    
 }
