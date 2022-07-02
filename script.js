@@ -6,6 +6,10 @@ closeNav.addEventListener("click",function(){
     navbar.classList.remove("expand-hr");
     document.getElementById("features-list").classList.remove("expand-vr");
     document.getElementById("companies-list").classList.remove("expand-vr");
+    document.getElementById("feature-arrow").classList.remove("rotate");
+    document.getElementById("company-arrow").classList.remove("rotate"); 
+    countComp++;   
+    countFeat++;
 })
 menu.addEventListener("click", function(){
     navbar.classList.add("expand-hr");
