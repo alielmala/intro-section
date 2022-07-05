@@ -1,42 +1,43 @@
 let closeNav= document.getElementById("close-btn");
 let navbar = document.getElementById("navbar");
 let menu = document.getElementById("menu");
-
+let features = document.getElementById("features");
+let featuresList = document.getElementById("features-list");
+let companies = document.getElementById("companies");
+let companiesList = document.getElementById("companies-list");
+//navbar open - close
 closeNav.addEventListener("click",function(){
     navbar.classList.remove("expand-hr");
-    document.getElementById("features-list").classList.remove("expand-vr");
-    document.getElementById("companies-list").classList.remove("expand-vr");
+    featuresList.classList.remove("expand-vr");
+    companiesList.classList.remove("expand-vr");
     document.getElementById("feature-arrow").classList.remove("rotate");
-    document.getElementById("company-arrow").classList.remove("rotate"); 
-    countComp++;   
-    countFeat++;
-})
+    document.getElementById("company-arrow").classList.remove("rotate");
+});
 menu.addEventListener("click", function(){
     navbar.classList.add("expand-hr");
 })
-let countFeat =0, countComp=0;
-document.getElementById("features").addEventListener("click",function(){
-        if (countFeat%2==0){
-            document.getElementById("features-list").classList.add("expand-vr");
-            document.getElementById("feature-arrow").classList.add("rotate");
-            countFeat++;
-        }
-        else{
-            document.getElementById("features-list").classList.remove("expand-vr");
-            document.getElementById("feature-arrow").classList.remove("rotate");
-            countFeat++;
-        }
-        
-})
-document.getElementById("companies").addEventListener("click",function(){
-    if (countComp%2==0){
-        document.getElementById("companies-list").classList.add("expand-vr");
-        document.getElementById("company-arrow").classList.add("rotate");
-        countComp++;
+
+//expand lists in navbar
+features.addEventListener("click",function(){
+    let classes = featuresList.className.split(" ");
+    if (classes[1]=="expand-vr"){
+        featuresList.classList.remove("expand-vr");
+        document.getElementById("feature-arrow").classList.remove("rotate");
+
     }
     else{
-        document.getElementById("companies-list").classList.remove("expand-vr");
+        featuresList.classList.add("expand-vr");
+        document.getElementById("feature-arrow").classList.add("rotate");
+    }
+});
+companies.addEventListener("click",function(){
+    let classes = companiesList.className.split(" ");
+    if (classes[1]=="expand-vr"){
+        companiesList.classList.remove("expand-vr");
         document.getElementById("company-arrow").classList.remove("rotate");
-        countComp++;
+    }
+    else{
+        companiesList.classList.add("expand-vr");
+        document.getElementById("company-arrow").classList.add("rotate");
     }
 })

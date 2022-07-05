@@ -299,8 +299,12 @@ header > * {
     .logos-list img {
         width: 60px;
     }
+    .nav-item:hover > a > img{
+        transform: none;
+        transition: transform .4s;
+    }
     .rotate{
-        transform: rotate(180deg);
+        transform: rotate(180deg) !important;
         transition: all .3s;
     }
     
