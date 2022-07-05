@@ -14,7 +14,7 @@ body * {
     
 }
 nav{
-    padding: 20px 3vw;
+    padding: 25px 3vw;
     display: flex;
     margin: 0px auto;
     position: relative;
@@ -22,7 +22,7 @@ nav{
 }
 .nav-list {
     display: flex;
-    margin: 0px 0px 0px 50px;
+    margin: 4px 0px 0px 50px;
     flex-grow: 1;
 }
 .close-nav{
@@ -157,6 +157,7 @@ header > * {
 .hero-h {
     color: #141414;
     font-size: 4rem;
+    font-weight: 700;
     margin: 3vh 4vw;
     max-width: 420px;
 
